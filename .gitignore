@@ -1,8 +1,9 @@
 # By Default, Ignore any .*, except .gitignore
 .*
 !.gitignore
+!.github
 
-# Allow vscode 
+# Allow vscode
 # !.vscode
 
 # By default
@@ -12,7 +13,6 @@ _*
 target/
 # '_' in src dir, ok.
 !src/**/_*
-
 
 # nodejs accept test
 !.mocharc.yaml
