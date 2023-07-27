@@ -11,7 +11,7 @@ fn main() -> Result<()> {
     println!("Hello, world!");
 
     // Example of the newtype pattern
-    for entry in read_dir("./")?.filter_map(|e| e.ok()) {
+    for entry in read_dir("./")?.filter_map(std::result::Result::ok) {
         let entry: String = W(&entry).try_into()?;
         println!("{entry}");
     }
